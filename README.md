@@ -21,7 +21,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+  
 ### Built With
 
 * [React](https://reactjs.org/)
@@ -31,6 +31,7 @@
 * [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 * [Docker](https://www.docker.com/)
 
+<!-- GETTING STARTED -->
 ### Use Front End
 * npm run dev
 
