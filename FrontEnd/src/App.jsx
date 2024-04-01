@@ -57,8 +57,8 @@ function App() {
 
           const csvOutput = event.target.result.split('\n');
           
-          var i ; //csvOutput.length
-          for(i=1; i < 5; i++){
+          var i ;
+          for(i=1; i < csvOutput.length; i++){ // Recomendo usar um numero menor caso tenha o email como alvo
               const dados =  csvOutput[i].split(',')
 
               let json_dados = {

@@ -9,9 +9,9 @@ config.read('config.ini')
 class Email:
 
     def __init__(self, destinatario: str):
-        self.destinatario = "oswaldo.91234@gmail.com" #destinatario
-        self.login = config["EMAIL"]["LOGIN"]
-        self.password = config["EMAIL"]["PASSWORD"]
+        self.destinatario = destinatario #Trocar para um email pessoal para ver ele chegar
+        self.login = config["EMAIL"]["LOGIN"]           # Recomendo trocar a conta pois o outlook bloqueia depois de poucos testes
+        self.password = config["EMAIL"]["PASSWORD"]     # 
         self.file_name = f'boleto-santander-{destinatario.replace(".", "_")}.pdf'
         self.msg = None
 
