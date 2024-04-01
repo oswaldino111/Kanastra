@@ -33,7 +33,7 @@ def sendEmails():
             retorno = processa_arquivos.main()
             classEmail.Email(dados.get("email")).main()
             #deleteFiles.Files.remove_file(dados.get("email"))
-            return retorno
+            return "Processado"
         else:
 
           return "Json não encontrado"
