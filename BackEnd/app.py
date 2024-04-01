@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, request
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from Classes import classBoleto, classEmail, deleteFiles
 import traceback
 
@@ -35,11 +35,11 @@ def sendEmails():
             #deleteFiles.Files.remove_file(dados.get("email"))
             return "Processado"
         else:
-
           return "Json não encontrado"
+        
     except:
        print(traceback.format_exc()) 
-       return "Json não encontrado"
+       return "ERRO"
 
 if __name__ == "__main__":
   app.run(debug=True)

@@ -35,7 +35,7 @@ function App() {
 
     const [file, setFile] = useState();
     
-    const { dispatch, lineNumber, uploadedCount, statusEnvio, files} = useFileContext();
+    const { dispatch, lineNumber, uploadedCount, erros, statusEnvio, files} = useFileContext();
 
     const fileReader = new FileReader();
   
@@ -72,7 +72,7 @@ function App() {
 
               dispatch({ type: 'next' });
 
-              http(json_dados);
+              http(json_dados, dispatch);
 
           };
           dispatch({ type: 'done' });
@@ -91,6 +91,7 @@ function App() {
         <Stack spacing={5} direction="row" justifyContent="center">
           <OutlinedCard texto={`Arquivos obtidos`} quantidade={uploadedCount}/>
           <OutlinedCard texto={`Emails Enviados`} quantidade={lineNumber}/>
+          <OutlinedCard texto={`Erros`} quantidade={erros}/>
           <OutlinedCard texto={`Status de Envio`} quantidade={statusEnvio}/>
         </Stack>
 
